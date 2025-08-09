@@ -1,0 +1,141 @@
+@charset "UTF-8";
+
+/*
+    Paleta de Cores
+    Verde: #49a09d;
+    Lilas: #5f2082;
+
+*/
+
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+:root{
+    --cor1:  #49a09d;
+    --cor2:  #5f2082;
+}
+
+
+
+body{
+    background-color: var(--cor2);
+}
+
+main{
+    background-color: whitesmoke;
+    box-shadow: 1px 2px 0px black;
+}
+
+
+main{
+    border: 2px solid black;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    border-radius: 20px;
+    height: 90vh;
+    width: 50vh;
+}
+
+main h1{
+    margin: 10px;
+    text-align: center;
+}
+
+main p{
+    text-align: left;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+section#imagem{
+    background-image: url(../imagens/imagem-login.jpg);
+    background-size: cover;
+    background-position: center center;
+    width: 50vh;
+    height: 200px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+section#dados{
+    margin: 10px;
+}
+
+div{
+    display: flex;
+    align-items: center;
+    margin: 10px;
+    text-align: center;
+    background-color: var(--cor2);
+    border-radius: 10px;
+    margin: auto;
+    margin-top: 3px;
+}
+
+span#user{
+    margin: 10px;
+    width: 30px;
+    height: -30px;
+}
+
+img#icon-senha{
+    width: 25px;
+    margin: 12px;
+}
+
+
+
+input{
+    background-color: var(--cor1);
+    border-radius: 10px;
+    text-decoration: white;
+    padding: 10px 20px;
+    margin: 5px;
+    margin-right: -70pxpx;
+    border: none;
+    border: 1px solid ;
+}
+
+input::placeholder{
+    color: white;
+}
+
+input:focus{
+    outline: none;
+    border: 1px solid white;
+}
+
+button{
+    display: block;
+    margin: auto;
+    padding: 10px;
+    width: 280px;
+    margin-top: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    border: none;
+}
+
+button#btnEntrar{
+    background-color: var(--cor1);
+    color: white;
+}
+
+button#btnSenha{
+    background-color: rgb(126, 175, 218);
+    color: black;
+    border: 2px solid #49a09d;
+}
+
+button:hover{
+    outline: 2px solid orange;
+}
+
+
+
