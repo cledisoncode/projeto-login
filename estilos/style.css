@@ -7,135 +7,143 @@
 
 */
 
+:root{
+        --cor1:  #49a09d;
+        --cor2:  #5f2082;
+}
+
 *{
     padding: 0px;
     margin: 0px;
     box-sizing: border-box;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
-:root{
-    --cor1:  #49a09d;
-    --cor2:  #5f2082;
-}
-
-
-
-body{
+body,html{
     background-color: var(--cor2);
+    height: 100vh;
+    width: 100vw;
 }
 
 main{
-    background-color: whitesmoke;
-    box-shadow: 1px 2px 0px black;
+    position: relative;
+    height: 100vh;
+    width: 100vw;
 }
 
-
-main{
-    border: 2px solid black;
+section#login{
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%,-50%);
+
+    background-color: white;
+    height: 550px;
+    width: 300px;
     border-radius: 20px;
-    height: 90vh;
-    width: 50vh;
+    overflow: hidden;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.450);
+
+    transition: width 0.3s, height .3s;
+    transition-timing-function: ease;
+    transform: translate(-50%,-50%);
+
 }
 
-main h1{
-    margin: 10px;
-    text-align: center;
-}
-
-main p{
-    text-align: left;
-    font-size: 16px;
-    font-weight: bold;
-}
-
-section#imagem{
-    background-image: url(../imagens/imagem-login.jpg);
-    background-size: cover;
-    background-position: center center;
-    width: 50vh;
-    height: 200px;
-    border-top-left-radius: 20px;
-    border-top-right-radius: 20px;
-}
-
-section#dados{
-    margin: 10px;
-}
-
-div{
-    display: flex;
-    align-items: center;
-    margin: 10px;
-    text-align: center;
-    background-color: var(--cor2);
-    border-radius: 10px;
-    margin: auto;
-    margin-top: 3px;
-}
-
-span#user{
-    margin: 10px;
-    width: 30px;
-    height: -30px;
-}
-
-img#icon-senha{
-    width: 25px;
-    margin: 12px;
-}
-
-
-
-input{
-    background-color: var(--cor1);
-    border-radius: 10px;
-    text-decoration: white;
-    padding: 10px 20px;
-    margin: 5px;
-    margin-right: -70pxpx;
-    border: none;
-    border: 1px solid ;
-}
-
-input::placeholder{
-    color: white;
-}
-
-input:focus{
-    outline: none;
-    border: 1px solid white;
-}
-
-button{
+section#login > div#imagem{
     display: block;
-    margin: auto;
+    background: var(--cor1) url(../imagens/imagem-login.jpg) no-repeat;
+    background-size: cover;
+    background-position: left bottom;
+    height: 200px;
+
+}
+
+section#login > div#formulario{
+    display: block;
     padding: 10px;
-    width: 280px;
-    margin-top: 10px;
+}
+
+div#formulario > h1{
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+div#formulario > p{
+    font-size: 0.8em;
+}
+
+form > div.campo{
+    background-color: var(--cor2);
+    border: 2px solid var(--cor2);
+    width: 100%; /*quando eu quero que determiando item ocupe 100% do container eu utiliz porcentagem*/
+    display: block;
+    height: 42px;
+    border-radius: 8px;
+    margin: 6px 0px;
+}
+
+div.campo > label{
+    display: none;
+}
+
+div.campo > span{
+    color: white;
+    font-size: 1.6em;
+    width: 40px;
+    padding: 5px;
+}
+
+div.campo > input{
+    background-color:  #7deeea;
+    font-size: 1em;
+    width: calc(100% - 45px);
+    height: 100%;
+    border: 0px;
+    border-radius: 8px;
+    padding: 4px;
+    transform: translateY(-9px); /*sempre que tiver um transform, coloque ele na ultima linha do seletor*/
+}
+
+div.campo > input:focus-within{
+    background-color: white;
+}
+
+form > input[type=submit]{
+    display: block;
+    font-size: 1em;
+    width: 100%; /*refente a 100% do conteiner no qual esta inserido*/
+    height: 40px;
+    background-color: var(--cor1);
+    color: white;
+    border: none;
     border-radius: 5px;
     cursor: pointer;
-    border: none;
 }
 
-button#btnEntrar{
-    background-color: var(--cor1);
-    color: white;
+form > input[type=submit]:hover{
+    background-color: #026423;
 }
 
-button#btnSenha{
-    background-color: rgb(126, 175, 218);
-    color: black;
-    border: 2px solid #49a09d;
+form > a.botao{
+    display: block;
+    text-align: center;
+    width: 100%;
+    height: 40px;
+    font-size: 1em;
+    background-color: white;
+    text-decoration: none;
+    border: 2px solid var(--cor1);
+    border-radius: 7px;
+    margin-top: 10px;
+    color: #03491a;
 }
 
-button:hover{
-    outline: 2px solid orange;
+form > a.botao:hover{
+    background-color:  #7deeea;
 }
 
+form > a.botao > span{
+    font-size: 0.8em;
+}
 
 
